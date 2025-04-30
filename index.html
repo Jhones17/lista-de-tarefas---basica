@@ -4,62 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista basica</title>
-    <style>
-        *{
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-        text-align: center;
-        background-color: brown;
-        }
-        #content{
-            margin-top: 250px;
-            border: color 100px
-            border-radius: black;
-        }
-        button{
-            height: 50px;
-            width: 100px;
-            border-radius: 50px;
-            background-color: black;
-            color: white;
-            border: none;
-        }
-        input{
-            height: 50px;
-            width: 150px;
-            border-radius: 40px;
-            border: none;
-            text-align: center;
-        }
-        ul{
-            list-style: none;
-            text-align: center;
-        }
-
-    </style>
 </head>
 <body>
     <div id="content">
     <h1 class="a">Lista de tarefas <small><i>basica</i></small></h1>
     <input type="text" placeholder="escrevar sua tarefa" class="a">
-    <button onclick="enviar()"Enviar class="a">Enviar</button>
+    <button onclick="enviar()" class="a">Enviar</button>
     <ul>
     </ul>
 </div>
  <!--enviar tarefas-->
  <script>
+    const tarefas = ['treina', 'amar', 'viver']  
+
     function enviar(){
-        const ul = document.querySelector('ul')
         const input = document.querySelector('input')
         const tarefa = input.value
-        
-        const li = document.createElement('li')
-        li.innerText = tarefa
-        ul.appendChild(li)
+        tarefas.push(tarefa)
         input.value = ''
+        renderizar()
     }
+    function renderizar(){
+        const ul = document.querySelector('ul')
+        ul.innerHTML= null
+        tarefas.forEach(function(tarefas){    
+            const li = document.createElement('li')
+            li.innerText = tarefas
+            ul.appendChild(li)
+        })
+
+    }
+    renderizar()
  </script>
 </body>
 </html>
