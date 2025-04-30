@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista basica</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        body{
+        text-align: center;
+        background-color: brown;
+        }
+        #content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        button{
+            height: 50px;
+            width: 100px;
+            border-radius: 50px;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+        input{
+            height: 50px;
+            width: 150px;
+            border-radius: 40px;
+            border: none;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+            marg
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+    <h1>Lista de tarefas <small><i>basica</i></small></h1>
+    <input type="text" placeholder="escrevar sua tarefa">
+    <button onclick="enviar()"Enviar>Enviar</button>
+    <ul>
+        
+    </ul></div>
+ <!--enviar tarefas-->
+ <script>
+    function enviar(){
+        const ul = document.querySelector('ul')
+        const input = document.querySelector('input')
+        const tarefa = input.value
+        
+        const li = document.createElement('li')
+        li.innerText = tarefa
+        ul.appendChild(li)
+        input.value = ''
+        
+
+    }
+ </script>
+</body>
+</html>
