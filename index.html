@@ -7,18 +7,16 @@
     <style>
         *{
             margin: 0;
-            padding: 0;
-            
+            box-sizing: border-box;
         }
         body{
         text-align: center;
         background-color: brown;
         }
-        #content {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+        #content{
+            margin-top: 250px;
+            border: color 100px
+            border-radius: black;
         }
         button{
             height: 50px;
@@ -37,18 +35,19 @@
         }
         ul{
             list-style: none;
-            marg
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
     <div id="content">
-    <h1>Lista de tarefas <small><i>basica</i></small></h1>
-    <input type="text" placeholder="escrevar sua tarefa">
-    <button onclick="enviar()"Enviar>Enviar</button>
+    <h1 class="a">Lista de tarefas <small><i>basica</i></small></h1>
+    <input type="text" placeholder="escrevar sua tarefa" class="a">
+    <button onclick="enviar()"Enviar class="a">Enviar</button>
     <ul>
-        
-    </ul></div>
+    </ul>
+</div>
  <!--enviar tarefas-->
  <script>
     function enviar(){
@@ -60,8 +59,6 @@
         li.innerText = tarefa
         ul.appendChild(li)
         input.value = ''
-        
-
     }
  </script>
 </body>
