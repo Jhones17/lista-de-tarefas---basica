@@ -4,15 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista basica</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            border: 10px solid white;
+            background-color: black;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            text-align: ;
+        
+        }
+        header{
+            color: white;
+            
+        }
+        main{
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        footer {
+            
+            color: white;
+            
+        }
+        header h1 {
+        border-radius: solid red;
+        }
+        li{
+            border-bottom: 1px solid white;
+            padding: 5px 15px;
+        }
+        #content{
+            padding: 100px;
+            background-color: dimgray;
+            border-radius: 50px;
+            place-content;
+        }
+        input{
+            width: 200px;
+            height: 20px;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        i{
+            border-bottom: 1px solid white;
+            
+        }
+        button {
+            width: 75px;
+            height: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="content">
+        <header>
     <h1 class="a">Lista de tarefas <small><i>basica</i></small></h1>
+        </header>
+        <main>
     <input type="text" placeholder="escrevar sua tarefa" class="a">
     <button onclick="enviar()" class="a">Enviar</button>
+        </main>
+        <footer>
     <ul>
     </ul>
-</div>
+    <button>deletar</button>
+        </footer>
+    </div>
+
+
  <!--enviar tarefas-->
  <script>
     const tarefas = ['treina', 'amar', 'viver']  
