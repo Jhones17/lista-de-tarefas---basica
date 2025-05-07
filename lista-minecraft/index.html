@@ -19,32 +19,55 @@
             background-image: url(/minecrafter/bloco.png);
             background-repeat: no-repeat;
             background-size: cover;
-            position: relative;
         }
-        .titulo{
-            font-size: 50px;
-            position: absolute;
-            margin-top: -100px;
-            margin-left: -30px;
+
+        .titulo {
+            font-size: 4rem;
         }
-        .enfase{
-            font-family: 'minecrafter', sans-serif;
+
+        .ensafe {
+            font-family: 'win', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'win';
+            src: url(/fontewi/Minecrafter.Alt.ttf) format(truetype);
+        }
+
+        @font-face {
+            font-family: 'win';
+            src: url(/fontewi/Minecrafter.Reg.ttf) format(truetype);
+        }
+        .prase{
+            padding: 100px;
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: green;
+            place-items: center;
+        }
+        .ensafe{
+            
+        margin-right: 100px;
+        }
+        .Enviar{
+            font-size: 20px;
+            border:;
 
         }
-        @font-face {
-            font-family: 'minecrafter';
-            src: url('minecrafter/Minecrafter.Reg.ttf') format('truetype');
-        }
-        
     </style>
 </head>
 
 <body>
-    <h1 class="titulo">lista de tarefas do <p class="enfase">minecraft</p></h1>
-    <input type="text" class="Enviar" placeholder="escreve sua tarefa do minecraft" /><button>Enviar</button>
-    <ul>
-        <li></li>
-    </ul>
+    <div class="tudo">
+        <div class="prase">
+        <h1 class="titulo">lista de tarefas do <p class="ensafe">minecraft</p>
+        </h1>
+            <input type="text" class="Enviar" placeholder="escreve sua tarefa do minecraft" /><button>Enviar</button>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
