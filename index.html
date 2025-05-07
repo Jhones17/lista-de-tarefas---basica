@@ -62,7 +62,7 @@
             border-bottom: 1px solid white;
             
         }
-        button {
+        .a{
             width: 75px;
             height: 20px;
             border: none;
@@ -72,15 +72,28 @@
             display: grid;
             place-items: center;
         }
+        .mine{
+        border: none;
+        border-radius: 100px;
+        height: 50px;
+        font-family: 'minecrafter', sans-serif;
+        background-image: '/minecrafter/bloco.png';
+        }
+
+        @font-face {
+            font-family: 'minecrafter';
+            src: url('minecrafter/Minecrafter.Reg.ttf') format('truetype');
+        }
+        
     </style>
 </head>
 <body>
     <div id="content">
         <header>
-    <h1 class="a">Lista de tarefas <small><i>basica</i></small></h1>
+    <h1 class="">Lista de tarefas <small><i>basica</i></small></h1>
         </header>
         <main>
-    <input type="text" placeholder="escrevar sua tarefa" class="a">
+    <input type="text" placeholder="escrevar sua tarefa" class="">
     <button onclick="enviar()" class="a">Enviar</button>
         </main>
         <footer>
@@ -88,8 +101,7 @@
     </ul>
         </footer>
     </div>
-
-
+    <a href="/lista-minecraft/index.html"><button class="mine"> Lista de tarefas do minecraft</button></a>
  <!--enviar tarefas-->
  <script>
     const tarefas = ['treina', 'amar', 'viver']  
