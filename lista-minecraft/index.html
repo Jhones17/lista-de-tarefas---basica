@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista do minecraft</title>
     <style>
-        *{
-            box-sizing: border-box;
+        * {
             margin: 0;
+            box-sizing: border-box;
         }
-        body{
-            display: grid;
-            place-items: center;
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            padding: 0;
             background-image: url(/minecrafter/bloco.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
         }
+        .titulo{
+            font-size: 50px;
+            position: absolute;
+            margin-top: -100px;
+            margin-left: -30px;
+        }
+        .enfase{
+            font-family: 'minecrafter', sans-serif;
+
+        }
+        @font-face {
+            font-family: 'minecrafter';
+            src: url('minecrafter/Minecrafter.Reg.ttf') format('truetype');
+        }
+        
     </style>
 </head>
+
 <body>
-    <h1>lista de tarefas</h1>
-    <input type="text" id="Enviar" placeholder="escreve sua tarefa do minecraft"><button> Enviar </button>
+    <h1 class="titulo">lista de tarefas do <p class="enfase">minecraft</p></h1>
+    <input type="text" class="Enviar" placeholder="escreve sua tarefa do minecraft" /><button>Enviar</button>
     <ul>
         <li></li>
     </ul>
-
 </body>
+
 </html>
