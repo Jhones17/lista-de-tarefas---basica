@@ -16,19 +16,21 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-image: url(/minecrafter/bloco.png);
+            background-image: url(/minecrafter/backgroud.jpeg);
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         .titulo {
             font-size: 4rem;
+
         }
 
         .ensafe {
             font-family: 'win', sans-serif;
+            text-align: center;
+            font-size: 4rem;
         }
-
         @font-face {
             font-family: 'win';
             src: url(/fontewi/Minecrafter.Alt.ttf) format(truetype);
@@ -45,14 +47,16 @@
             border: green;
             place-items: center;
         }
-        .ensafe{
-            
-        margin-right: 100px;
-        }
         .Enviar{
             font-size: 20px;
-            border:;
-
+        }
+        .caixa1{
+            background-color: black;
+            padding: 100px;
+        }
+        .titulo {
+            color: green;
+            text-shadow: 10px;
         }
     </style>
 </head>
@@ -60,12 +64,13 @@
 <body>
     <div class="tudo">
         <div class="prase">
-        <h1 class="titulo">lista de tarefas do <p class="ensafe">minecraft</p>
-        </h1>
+            <h1 class="titulo">lista de tarefas do</h1><p class="ensafe">minecraft</p><br>
+                <div class="caixa1">
             <input type="text" class="Enviar" placeholder="escreve sua tarefa do minecraft" /><button>Enviar</button>
             <ul>
                 <li></li>
             </ul>
+                </div>
         </div>
     </div>
 </body>
