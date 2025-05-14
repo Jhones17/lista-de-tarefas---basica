@@ -21,15 +21,19 @@
             background-size: cover;
         }
 
-        .titulo {
+        .titulo{
             font-size: 4rem;
-
+            font-family: 'win', sans-serif;
+            text-shadow: 5px 5px 5px #000;
+            color: green;
+            text-shadow: 10px;
         }
-
         .ensafe {
             font-family: 'win', sans-serif;
             text-align: center;
             font-size: 4rem;
+            text-shadow: 5px 5px 5px #000000;
+            color: green;
         }
         @font-face {
             font-family: 'win';
@@ -51,12 +55,23 @@
             font-size: 20px;
         }
         .caixa1{
-            background-color: black;
-            padding: 100px;
+            background-image:url(/minecrafter/bloco.png) ;
+            padding: 150px;
+            border-radius: 50px;
+            
         }
-        .titulo {
-            color: green;
-            text-shadow: 10px;
+        img{
+            height: 300px;
+            position: relative;
+            right: -250px;
+        }
+        .ensafe1{
+            border-radius:100px ;
+            font-family: 'win', sans-serif;
+            text-align: center;
+            font-size: 4rem;
+            text-shadow: 5px 5px 5px #000000;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -65,6 +80,8 @@
     <div class="tudo">
         <div class="prase">
             <h1 class="titulo">lista de tarefas do</h1><p class="ensafe">minecraft</p><br>
+            <a href="/minecrafter/"></a><img src="/minecrafter/jack-removebg-preview.png" alt="jack black" onclick="som()">
+            <p class="ensafe1">I'M STEVE</p>
                 <div class="caixa1">
             <input type="text" class="Enviar" placeholder="escreve sua tarefa do minecraft" /><button>Enviar</button>
             <ul>
@@ -73,6 +90,12 @@
                 </div>
         </div>
     </div>
+    <script>
+        function som(){
+            var audio = new Audio('/minecrafter/I am Steve Jack Black - A Minecraft Movie FULL CLIP.mp3' )
+            Audio.play();
+        }
+    </script>
 </body>
 
 </html>
