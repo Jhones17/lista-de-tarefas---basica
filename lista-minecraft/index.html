@@ -1,101 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista do minecraft</title>
     <style>
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: url(/minecrafter/backgroud.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url(/minecrafter/backgroud.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-        .titulo{
-            font-size: 4rem;
-            font-family: 'win', sans-serif;
-            text-shadow: 5px 5px 5px #000;
-            color: green;
-            text-shadow: 10px;
-        }
-        .ensafe {
-            font-family: 'win', sans-serif;
-            text-align: center;
-            font-size: 4rem;
-            text-shadow: 5px 5px 5px #000000;
-            color: green;
-        }
-        @font-face {
-            font-family: 'win';
-            src: url(/fontewi/Minecrafter.Alt.ttf) format(truetype);
-        }
+      .titulo {
+        font-size: 3rem;
+        font-family: "win", sans-serif;
+        text-shadow: 5px 5px 5px #000;
+        color: green;
+        text-shadow: 10px;
+      }
+      .ensafe {
+        font-family: "win", sans-serif;
+        text-align: center;
+        font-size: 3rem;
+        text-shadow: 5px 5px 5px #000000;
+        color: green;
+      }
+      @font-face {
+        font-family: "win";
+        src: url(/fontewi/Minecrafter.Alt.ttf) format(truetype);
+      }
 
-        @font-face {
-            font-family: 'win';
-            src: url(/fontewi/Minecrafter.Reg.ttf) format(truetype);
-        }
-        .prase{
-            padding: 100px;
-            border-radius: 50px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: green;
-            place-items: center;
-        }
-        .Enviar{
-            font-size: 20px;
-        }
-        .caixa1{
-            background-image:url(/minecrafter/bloco.png) ;
-            padding: 150px;
-            border-radius: 50px;
-            
-        }
-        img{
-            height: 300px;
-            position: relative;
-            right: -250px;
-        }
-        .ensafe1{
-            border-radius:100px ;
-            font-family: 'win', sans-serif;
-            text-align: center;
-            font-size: 4rem;
-            text-shadow: 5px 5px 5px #000000;
-            color: #ffffff;
-        }
+      @font-face {
+        font-family: "win";
+        src: url(/fontewi/Minecrafter.Reg.ttf) format(truetype);
+      }
+      .prase {
+        padding: 50px;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: green;
+        place-items: center;
+      }
+      .Enviar {
+        font-size: 20px;
+      }
+      .caixa1 {
+        background-image: url(/minecrafter/bloco.png);
+        padding: 100px;
+        border-radius: 25px;
+      }
+      img {
+        height: 100px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .crescer-hover:hover img {
+        height: 300px;
+        transition: 1s;
+      }
+      .crescer-hover:hover p{
+        font-size: 50px;
+        transition: 1s;
+      }
+      .crescer-hover:hover{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .ensafe1 {
+        border-radius: 100px;
+        font-family: "win", sans-serif;
+        height: 100px;
+        text-shadow: 5px 5px 5px #000000;
+        color: #ffffff;
+        transition: 0.5s;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="tudo">
-        <div class="prase">
-            <h1 class="titulo">lista de tarefas do</h1><p class="ensafe">minecraft</p><br>
-            <a href="/minecrafter/"></a><img src="/minecrafter/jack-removebg-preview.png" alt="jack black" onclick="som()">
-            <p class="ensafe1">I'M STEVE</p>
-                <div class="caixa1">
-            <input type="text" class="Enviar" placeholder="escreve sua tarefa do minecraft" /><button>Enviar</button>
-            <ul>
-                <li></li>
-            </ul>
-                </div>
+      <div class="prase">
+        <h1 class="titulo">lista de tarefas do</h1>
+        <p class="ensafe">minecraft</p>
+        <br />
+        <div class="crescer-hover">
+          <audio src="/minecrafter/i-am-steve.mp3" id="imsteve"></audio>
+          <img
+            src="/minecrafter/jack-removebg-preview.png"
+            alt="jack black"
+            id="imgsteve"
+            onclick="som()"
+          />
+          <p class="ensafe1">I'M STEVE</p>
         </div>
+        <div class="caixa1">
+          <input
+            type="text"
+            class="Enviar"
+            placeholder="escreve sua tarefa do minecraft"
+          /><button>Enviar</button>
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <script>
-        function som(){
-            var audio = new Audio('/minecrafter/I am Steve Jack Black - A Minecraft Movie FULL CLIP.mp3' )
-            Audio.play();
-        }
+      function som() {
+        document
+          .getElementById("imgsteve")
+          .addEventListener("click", function () {
+            document.getElementById("imsteve").play();
+          });
+      }
     </script>
-</body>
-
+  </body>
 </html>
