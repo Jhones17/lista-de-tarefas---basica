@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista do minecraft</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/lista-minecraft/favicon_io (1)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/lista-minecraft/favicon_io (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/lista-minecraft/favicon_io (1)/favicon-16x16.png">
+    <title>Lista do Minecraft</title>
     <style>
       * {
         margin: 0;
@@ -20,13 +23,45 @@
         background-size: cover;
       }
 
+      @font-face {
+        font-family: "win";
+        src: url(/fontewi/Minecrafter.Alt.ttf) format(truetype);
+      }
+      @font-face {
+        font-family: "win";
+        src: url(/fontewi/Minecrafter.Reg.ttf) format(truetype);
+      }
+      @font-face {
+        font-family: "mine2";
+        src: url(/lista-minecraft/minecraft/Minecraft.ttf) format(truetype);
+      }
+      .tudo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .prase {
+        padding: 50px;
+        height: 900px;
+        width: 1000px;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
       .titulo {
         font-size: 3rem;
         font-family: "win", sans-serif;
         text-shadow: 5px 5px 5px #000;
         color: green;
-        text-shadow: 10px;
+        text-align: center;
       }
+
       .ensafe {
         font-family: "win", sans-serif;
         text-align: center;
@@ -34,67 +69,89 @@
         text-shadow: 5px 5px 5px #000000;
         color: green;
       }
-      @font-face {
-        font-family: "win";
-        src: url(/fontewi/Minecrafter.Alt.ttf) format(truetype);
+
+      .caixa1 {
+        background-image: url(/lista-minecraft/img/Full_and_Budget_Nether_Portal.jpg);
+        background-repeat: no-repeat;
+        max-width: 100%;
+        height: auto;
+        padding: 50px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
 
-      @font-face {
-        font-family: "win";
-        src: url(/fontewi/Minecrafter.Reg.ttf) format(truetype);
-      }
-      .prase {
-        padding: 50px;
-        border-radius: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border: green;
-        place-items: center;
-      }
       .Enviar {
+        height: 50px;
+        width: 250px;
         font-size: 20px;
+        padding: 8px;
+        border: solid #342c24 2px;
+        box-shadow: 0px 2px 0px 0px #342c24;
+        color: white;
+        background-image: url(/lista-minecraft/img/Enchanting_Table_GUI.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        outline: none;
+        transition: 0.5s;
+        font-family:"mine2", sans-serif;
+        text-transform: uppercase;
       }
-      .caixa1 {
-        background-image: url(/minecrafter/bloco.png);
-        padding: 100px;
-        border-radius: 25px;
+      .Enviar:hover{
+        border: solid #430999 ;
+        transition: 1s;
       }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
       img {
-        height: 100px;
+        height: 300px;
         cursor: pointer;
         transition: 0.5s;
       }
+
+      .crescer-hover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
       .crescer-hover:hover img {
-        height: 300px;
+        height: 320px;
         transition: 1s;
       }
-      .crescer-hover:hover p{
+
+      .crescer-hover:hover p {
         font-size: 50px;
         transition: 1s;
       }
-      .crescer-hover:hover{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+
       .ensafe1 {
-        border-radius: 100px;
         font-family: "win", sans-serif;
-        height: 100px;
         text-shadow: 5px 5px 5px #000000;
         color: #ffffff;
         transition: 0.5s;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
       }
+      #pesquisa{
+        height: 50px;
+      }
+      
     </style>
   </head>
-
   <body>
     <div class="tudo">
       <div class="prase">
-        <h1 class="titulo">lista de tarefas do</h1>
-        <p class="ensafe">minecraft</p>
-        <br />
+        <h1 class="titulo">Lista de tarefas do</h1>
+        <p class="ensafe">Minecraft</p>
         <div class="crescer-hover">
           <audio src="/minecrafter/i-am-steve.mp3" id="imsteve"></audio>
           <img
@@ -110,7 +167,8 @@
             type="text"
             class="Enviar"
             placeholder="escreve sua tarefa do minecraft"
-          /><button>Enviar</button>
+          />
+          <button>Enviar</button>
           <ul>
             <li></li>
           </ul>
@@ -119,11 +177,7 @@
     </div>
     <script>
       function som() {
-        document
-          .getElementById("imgsteve")
-          .addEventListener("click", function () {
-            document.getElementById("imsteve").play();
-          });
+        document.getElementById("imsteve").play();
       }
     </script>
   </body>
